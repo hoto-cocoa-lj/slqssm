@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="slq.mapper.StudentMapper">
+    <resultMap type="slq.pojo.Student" id="st">
+        <association property="teacher" javaType="slq.pojo.Teacher" select="selectTeacher" column="tid"/>
+    </resultMap>
+    <select id="getOne" resultMap="st">
+        SELECT * FROM student WHERE id=#{id}
+    </select>
+    <select id="selectTeacher"   resultType="slq.pojo.Teacher">
+        SELECT * FROM teacher  WHERE id=#{tid}
+    </select>
+
+    <insert id="insert1" parameterType="student" useGeneratedKeys="true" keyProperty="id">
+         insert into student (name,age) values(#{name},#{age})
+    </insert>
+    <delete id="del" >
+        fuck!!
+    </delete>
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!--    <properties resource="db.properties" />-->
+<!--    <environments default="mysql">-->
+<!--        <environment id="mysql">-->
+<!--            <transactionManager type="JDBC"></transactionManager>-->
+<!--            <dataSource type="POOLED">-->
+<!--                <property name="driver" value="${driver}"></property>-->
+<!--                <property name="url" value="${url}"></property>-->
+<!--                <property name="username" value="${username}"></property>-->
+<!--            </dataSource>-->
+<!--        </environment>-->
+<!--    </environments>-->
+<!--    <mappers>-->
+<!--        &lt;!&ndash;这是告诉Mybatis区哪找持久化类的映射文件，对于在src下的文件直接写文件名，-->
+<!--            如果在某包下，则要写明路径,如：com/mybatistest/config/User.xml&ndash;&gt;-->
+<!--        <mapper  resource="slq/mapper/StudentMapper.xml"/>-->
+<!--    </mappers>-->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <typeAliases>
+        <package name="slq.pojo"/>
+    </typeAliases>
+</configuration>
+
+
+
+
